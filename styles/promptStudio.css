@@ -1,0 +1,454 @@
+/* ===================================
+   PROMPT STUDIO MOBILE STYLES
+   =================================== */
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Extra small breakpoint (xs) - 480px */
+@media (min-width: 480px) {
+  .xs\:inline {
+    display: inline !important;
+  }
+  
+  .xs\:hidden {
+    display: none !important;
+  }
+}
+
+/* Touch feedback */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.active\:scale-98:active {
+  transform: scale(0.98);
+}
+
+.active\:scale-95:active {
+  transform: scale(0.95);
+}
+
+/* Mobile-optimized grids */
+@media (max-width: 640px) {
+  .mobile-grid-1 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .mobile-gap-3 {
+    gap: 0.75rem !important;
+  }
+}
+
+/* Prompt card improvements for mobile */
+@media (max-width: 640px) {
+  .prompt-card {
+    border-radius: 12px;
+    padding: 12px;
+  }
+  
+  .prompt-card-title {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .prompt-card-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Better text wrapping on mobile */
+@media (max-width: 640px) {
+  .break-words {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Sticky actions on mobile */
+@media (max-width: 640px) {
+  .mobile-sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    background: linear-gradient(to top, 
+      rgb(255 255 255) 0%, 
+      rgb(255 255 255) 80%, 
+      transparent 100%
+    );
+    padding: 16px;
+    margin: -16px;
+    margin-top: 16px;
+  }
+  
+  .dark .mobile-sticky-bottom {
+    background: linear-gradient(to top, 
+      rgb(30 41 59) 0%, 
+      rgb(30 41 59) 80%, 
+      transparent 100%
+    );
+  }
+}
+
+/* Improved mobile modals */
+@media (max-width: 640px) {
+  .mobile-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Compact spacing on mobile */
+@media (max-width: 640px) {
+  .space-y-mobile-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .space-y-mobile-4 > * + * {
+    margin-top: 1rem;
+  }
+}
+
+/* Better button sizes for mobile */
+@media (max-width: 640px) {
+  .btn-mobile {
+    min-height: 44px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .btn-mobile-lg {
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Color palette display optimization */
+@media (max-width: 640px) {
+  .color-swatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  
+  .color-swatch-text {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+}
+
+/* Improved technical specs layout */
+@media (max-width: 640px) {
+  .tech-specs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .tech-spec-item {
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Score card animations */
+.score-card-animate {
+  animation: scoreReveal 0.5s ease-out forwards;
+}
+
+@keyframes scoreReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Loading state for mobile */
+@media (max-width: 640px) {
+  .mobile-loading {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-loading-spinner {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Improved carousel slide cards */
+@media (max-width: 640px) {
+  .carousel-slide-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .carousel-slide-number {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  
+  .carousel-slide-title {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-top: 8px;
+  }
+  
+  .carousel-slide-content {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Better copy button positioning */
+.copy-button-mobile {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+@media (min-width: 640px) {
+  .copy-button-mobile {
+    position: static;
+  }
+}
+
+/* Improved textarea for mobile */
+@media (max-width: 640px) {
+  textarea {
+    min-height: 120px !important;
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    line-height: 1.5;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: rgb(139 92 246);
+    ring-width: 2px;
+    ring-color: rgb(139 92 246);
+  }
+}
+
+/* Template button optimization */
+@media (max-width: 640px) {
+  .template-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+}
+
+/* Analysis result improvements */
+@media (max-width: 640px) {
+  .analysis-section {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .analysis-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .analysis-content {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Comparison cards side-by-side optimization */
+@media (max-width: 640px) {
+  .comparison-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+}
+
+/* Better list styling for mobile */
+@media (max-width: 640px) {
+  ul, ol {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+}
+
+/* Improvements list optimization */
+.improvement-item {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 640px) {
+  .improvement-item {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+  }
+  
+  .improvement-priority {
+    align-self: flex-start;
+  }
+}
+
+/* Key frames display */
+@media (max-width: 640px) {
+  .keyframe-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    border-left: 3px solid rgb(139 92 246);
+    padding-left: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .keyframe-timestamp {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(139 92 246);
+  }
+  
+  .keyframe-description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Responsive tabs */
+@media (max-width: 640px) {
+  .tab-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .tab-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab-item {
+    flex-shrink: 0;
+    min-width: fit-content;
+  }
+}
+
+/* Platform-specific prompt cards */
+@media (max-width: 640px) {
+  .platform-prompt-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+  
+  .platform-prompt-card {
+    padding: 10px;
+  }
+  
+  .platform-prompt-title {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .platform-prompt-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button {
+    border: 2px solid currentColor;
+  }
+  
+  .border {
+    border-width: 2px;
+  }
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .mobile-sticky-bottom {
+    background: linear-gradient(to top, 
+      rgb(30 41 59) 0%, 
+      rgb(30 41 59) 80%, 
+      transparent 100%
+    );
+  }
+}
+
+/* Safe area adjustments for iOS */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 640px) {
+  /* Use CSS containment */
+  .contain-layout {
+    contain: layout;
+  }
+  
+  .contain-paint {
+    contain: paint;
+  }
+  
+  /* Reduce repaints */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  /* GPU acceleration for smooth animations */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}

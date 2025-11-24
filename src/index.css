@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Teko:wght@300;500;700&display=swap');
+
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: #121212;
+  --accent-primary: #ff2a6d; /* Neon Red/Pink */
+  --accent-secondary: #05d9e8; /* Cyber Blue */
+  --text-main: #e0e0e0;
+  --text-muted: #888888;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Rajdhani', sans-serif; /* Techniczny, futurystyczny font */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Teko', sans-serif; /* Wysoki, "plakatowy" font dla nagłówków */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+/* Efekt "szkła" dla kart */
+.warrior-card {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-primary); /* Akcent po lewej */
+  transition: all 0.3s ease;
+}
+
+.warrior-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 42, 109, 0.3);
+  border-color: var(--accent-primary);
+}

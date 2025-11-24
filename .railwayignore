@@ -1,0 +1,34 @@
+# Railway Ignore - nie uploaduj tych plików do Railway
+
+# Development
+node_modules/
+.git/
+.vscode/
+.idea/
+
+# Docs
+*.md
+!README.md
+
+# Tests
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Examples
+examples/
+UI_EXAMPLES.tsx
+
+# Database (jeśli nie używasz na Railway)
+*.sql
+*.db
+
+# Docker (używamy Nixpacks)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Local env
+.env.local
+.env.development
