@@ -40,6 +40,7 @@ COPY nginx.conf /etc/nginx/templates/default.conf.template
 # Railway sets PORT env var - nginx will listen on that port
 ENV PORT=80
 
-EXPOSE ${PORT}
+# Note: EXPOSE is for documentation only; Railway uses the PORT env var
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
