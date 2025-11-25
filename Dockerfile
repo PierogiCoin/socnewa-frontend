@@ -25,6 +25,17 @@ RUN pnpm install --frozen-lockfile
 # Copy source code
 COPY . .
 
+# Build arguments for Vite environment variables
+# These are required at build time because Vite embeds them in the JavaScript bundle
+ARG VITE_SUPABASE_URL
+ARG VITE_SUPABASE_ANON_KEY
+ARG VITE_API_BASE_URL
+
+# Set environment variables for the build process
+ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
+ENV VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 # Build the application
 RUN pnpm run build
 
